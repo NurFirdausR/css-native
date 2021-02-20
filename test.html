@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+        }
+
+        .topnav {
+            /* //menambah konten scroolbar */
+            overflow: hidden;
+
+            background-color: rgb(255, 255, 255);
+        }
+
+        .topnav a {
+            /* supaya rata kekiri/ */
+            float: left;
+            color: #929292;
+            text-align: center;
+            padding: 20px 24px;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .topnav span {
+            float: left;
+            color: #444141;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        .topnav-right {
+
+            float: right;
+            text-align: center;
+            padding: 3px 16px;
+            padding-right: 140px;
+            text-decoration: none;
+        }
+
+        .icon-search {
+            /* membuat jarak dari atas */
+            margin-top: 20px;
+            margin-left: 5px;
+            /* membuat elemen bisa di pindahkan */
+            position: absolute;
+            float: right;
+            width: 20px;
+            height: 20px;
+            color: rgb(135, 130, 130);
+        }
+
+        .icon-bag {
+            margin-top: 15px;   
+            float: right;
+            padding-right: 22px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .search-nav {
+            position: absolute;
+            margin-top: 10px;
+            margin-right: 20px;
+            width: 110px;
+            height: 35px;
+            text-align: center;
+            /* //membuat cekungan di ujung border  */
+            border-radius: 6px;
+            border: none;
+            background-color: rgb(235, 226, 226);
+        }
+
+        .search-nav:focus
+        input:focus {
+            /* //saat input focus di hilangkan */
+            border-radius: 6px;
+            outline:none;
+        }
+
+    
+
+        .dribble {
+            font-family: 'Yesteryear', cursive;
+        }
+
+        .btn-nav {
+            margin-top: 14px;
+            float: right;
+            border:  orchid;
+            width: 88px;
+            height: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: rgb(245, 1, 135);
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+
+        .btn-nav:hover {
+            margin-top: 14px;
+            float: right;
+            border: orchid;
+            width: 88px;
+            height: 40px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 248, 248);
+            background-color: rgb(250, 111, 187);
+            border-radius: 8px;
+            outline: rgb(138, 29, 44);
+            margin-right: 10px;
+        }
+
+      
+        .header-image{
+            width: 100%;
+            background-size: cover;
+            background-position:top;
+            background-image: url("https://static.dribbble.com/users/3281732/screenshots/8159457/samji_illustrator_2x.jpg");
+            height: 400px;            
+        }
+        .header-image h1{
+            text-align: center;
+            margin-top: 40px;
+            font-family: sans-serif;
+            font-size: 60px;
+            color: white;
+        }
+        .header-image h5{
+            text-align: center;
+            margin-top: 40px;
+            font-size: 30px;
+            font-family: sans-serif;
+            
+            color: white;
+        }
+        
+
+        .search-mid {
+            
+            position: absolute;
+            left: 29%;
+            top: 73%;
+            /* //mmbuat content ke tengah */
+            justify-content: center;
+            width: 40%;
+            height: 60px;
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .search-mid span {
+
+            position: absolute;
+            top: 20px;
+            font-family: monospace;
+            /* ukuran font   */
+            font-size: 15px;
+            /* menjadi tebal */
+            font-weight: bold;
+            /* //jarak dari kanan mirip dengan padding/margin */
+            right: 8%;
+            /* //mmbuat content ke tengah */
+            justify-content: center;
+
+        }
+
+        .search-mid-input {
+            border: none;
+            position: absolute;
+            top: 8px;
+            left: 40px;
+            width: 340px;
+            height: 40px;
+            justify-content: center;
+
+        }
+
+        .search-mid-input,
+        input:focus {
+            outline: none;
+
+        }
+
+        .batas {
+            top: 10px;
+            position: absolute;
+            right: 20%;
+            border-left: 2px solid rgb(141, 138, 138);
+            height: 35px;
+        }
+
+        .search-mid i {
+            top: 20px;
+            left: 18px;
+            color: rgba(95, 95, 90, 0.508);
+            position: absolute;
+
+        }
+
+        .search-mid i,
+        ::placeholder {
+            font-size: 17px;
+
+        }
+
+
+        .shots {
+            right: 5%;
+            position: absolute;
+            display: block;
+        }
+
+        .down-shots {
+            top: 20px;
+            right: 10px;
+            list-style: none;
+            display:    ;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 140px;
+            border-radius: 4px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+        }
+
+        .shots:hover .down-shots {
+            display: block;
+        }
+
+        .link-shots {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            color: rgb(248, 0, 186);
+        }
+
+
+
+        /* //Tittle Untuk COntent */
+        .content {
+            width: 100%;
+            height: 90%;
+
+            background-color: rgb(255, 255, 255);
+        }
+
+        .content h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(100, 97, 97);
+            text-align: center;
+        }
+
+        .inline-related {
+            color: rgb(73, 71, 71);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .inline-related a {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(238, 106, 212);
+        }
+
+        .menu {
+            color: rgb(73, 71, 71);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .menu a {
+            color: rgb(73, 71, 71);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            text-align: center;
+            font-size: 15px;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* CARD UNTUK PRODUCT */
+
+        .collection * {
+            margin-left: 10px;
+        }
+
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 30%;
+            /* //memberikan jarak  antara colomn */
+            padding: 11px;
+            margin-top: 12px;
+        }
+
+        /* Remove extra left and right margins, due to padding */
+        .row {
+            margin: 10px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display:grid;
+            clear: both;
+        }
+
+        /* Responsive columns */
+        /* @media query merupakan sebuah teknik css layout yang 
+membebaskan kita untuk menyeting tampilan dengan CSS di 
+berbagai resolusi dan lebar, tinggi daripada browser yang sedang 
+kita gunakan secara spesifik. */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Style the counter cards */
+        .card {
+            padding: 16px;
+            height: 260px;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+
+        .card:hover {
+            border-radius: 20px;
+            transition: box-shadow 0.3s ease-in-out;
+            box-shadow: 0px 2px 20px 2px rgb(138, 138, 138);
+            padding: 16px;
+            height: 260px;
+            background-color: transparent;
+        }
+
+        .card img {
+            border-radius: 10px;
+            width: 100%;
+            margin: 0;
+            height: 100%;
+
+        }
+
+        .profile {
+            display: block;
+        }
+
+        .profile figure img {
+            float: left;
+            border-radius: 180px;
+            width: 25px;
+            height: 25px;
+        }
+
+        .profile h6 {
+            margin-top: 2px;
+        }
+
+        .name-profile {
+            float: left;
+            margin-left: 10px;
+            font-size: 26px;
+        }
+        .name-profile i{
+            float: right;
+            margin-left: 20px;
+        }
+        .name-profile i:hover{
+            color: rgb(209, 12, 104);
+            margin-left: 20px;
+        }
+
+
+
+
+
+        /* //footer */
+        footer {
+            width: 100%;
+            height: 90%;
+            background-color: rgb(255, 255, 255);
+
+            position: relative;
+        }
+
+
+
+        .column-footer {
+            float: left;
+            width: 14.10%;
+            padding: 14px;
+
+        }
+
+        .column-footer h1 {
+            font-size: 40px;
+            color: rgb(252, 14, 125);
+        }
+
+        /* Clear floats after the columns */
+        .row-footer:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width:600px) {
+            .column-footer {
+                width: 100%;
+            }
+        }
+
+        .font {
+            font-family: sans-serif;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding-top: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .flawles {
+            color: rgb(242, 29, 121);
+        }
+        .header-image h1,h2,h3,h4,h5{
+            text-align: center;
+            margin-top: 40px;
+
+        }
+        .footer-end span {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+       
+        .adver{
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="topnav">
+        <span class="dribble">dribbble</span>
+        <a href="#news">Inspiration</a>
+        <a href="#contact">Find Work</a>
+        <a href="#about">Learn</a>
+        <a href="#about">Go Pro</a>
+        <a href="#about">Hire Designers</a>
+        <!-- rigth navbar -->
+        <button class="btn-nav"><strong>UPLOAD</strong></button>
+        <i class="fa fa-shopping-bag icon-bag fa-2x " aria-hidden="true"></i>
+        <div class="topnav-right">
+            <input type="text" class="search-nav" placeholder="search" >
+            <i class="fa fa-search icon-search " aria-hidden="true"></i>
+        </div>
+    </nav>
+    <br>
+    <div class="header-image">
+        <img src="" alt="" srcset="">
+        <h1>Search Dribbble</h1>
+        <h5>6,300,000+ image from thousands of inspirational designers</h5>
+    </div>
+    <div class="search-mid">
+        <i class="fa fa-search " aria-hidden="true"></i>
+        <input class="search-mid-input" type="text" placeholder="Search" value="Illustration set">
+        <div class="batas"></div>
+        <div class="shots">
+            <span>Shots</span>
+            <ul class="down-shots">
+                <li><a class="link-shots" href="#">Shots </a> </li>
+                <li><a class="link-shots" href="#"> Member</a> </li>
+                <li><a class="link-shots" href="#"> Team</a> </li>
+            </ul>
+        </div>
+
+    </div>
+    <br>
+
+    <main class="content">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1> Illustration set </h1>
+        <p>10,000+ inspirational illustration set designs, illustrations, and graphic elements</p>
+        <div class="inline-related">
+            <span>Related: </span>&nbsp;
+            <a href="">vector</a> &nbsp;
+            <a href="">pack</a> &nbsp;
+            <a href="">isolated</a> &nbsp;
+            <a href="">collection</a> &nbsp;
+            <a href="">outline</a> &nbsp;
+            <a href="">illustrator</a> &nbsp;
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="menu">
+            <a href="">All</a> &nbsp;
+            <a href="">Animation</a> &nbsp;
+            <a href="">Branding</a> &nbsp;
+            <a href="">illustration</a> &nbsp;
+            <a href="">Mobile</a> &nbsp;
+            <a href="">Print</a> &nbsp;
+            <a href="">Product Design</a> &nbsp;
+            <a href="">Typography</a> &nbsp;
+            <a href="">Web Design</a> &nbsp;
+        </div>
+        <br>
+        <br>
+
+        <!-- //Product -->
+        <div class="collection">
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.dribbble.com/users/1998175/screenshots/15075129/media/7f8bb0198caa0f5e0455a062c849dd3c.jpg?compress=1&resize=800x600"
+                            alt="">
+                        <div class="profile">
+                            <figure>
+                                <img src="https://cdn.dribbble.com/users/1998175/avatars/normal/af46ac7b92eb85f76f5a3fe4f214fdf2.jpg?1542363868"
+                                    alt="" srcset="">
+                            </figure>
+                            <div class="name-profile">
+                                <h6>
+                                    Taras Migulko 
+                                    <i class="fas fa-comment"></i>
+                                    <i class="fas fa-heart"></i>
+                                </h6>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.dribbble.com/users/1619633/screenshots/14260740/media/675055753c3fac2f37c99bf97ab3964b.png?compress=1&resize=800x600"
+                            alt="">
+                        <div class="profile">
+                            <figure>
+                                <img src="https://cdn.dribbble.com/users/1619633/avatars/normal/3bafb6c4e494ecc95ffd1574b447b388.jpg?1586859071"
+                                    alt="" srcset="">
+                            </figure>
+                            <div class="name-profile">
+                                <h6>
+                                    Afshin T2Y  
+                                    <i class="fas fa-comment"></i>
+                                    <i class="fas fa-heart"></i>
+                                </h6>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.dribbble.com/users/4335179/screenshots/14787779/media/855d4252065de1fee9dce32c6f1f037d.png?compress=1&resize=800x600"
+                            alt="">
+                        <div class="profile">
+                            <figure>
+                                <img src="https://cdn.dribbble.com/users/4335179/avatars/normal/70ba341930ba4bbf6d2c586133fe78d2.jpeg?1610290197"
+                                    alt="" srcset="">
+                            </figure>
+                            <div class="name-profile">
+                                <h6>
+                                    Amirbaqian 
+                                    <i class="fas fa-comment"></i>
+                                    <i class="fas fa-heart"></i>
+                                </h6>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.dribbble.com/users/59947/screenshots/14602993/media/8b9598942db44d0d400a97e785bb7323.jpg?compress=1&resize=800x600"
+                            alt="">
+                        <div class="profile">
+                            <figure>
+                                <img src="https://cdn.dribbble.com/users/59947/avatars/normal/5ed2865a861fcd2bc9f9d9aff7600f8b.jpg?1574070463"
+                                    alt="" srcset="">
+                            </figure>
+                            <div class="name-profile">
+                                <h6>
+                                    MUTI 
+                                    <i class="fas fa-comment"></i>
+                                    <i class="fas fa-heart"></i>
+                                </h6>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.dribbble.com/users/32512/screenshots/14486569/media/05ef29c4c2598b64be96b47198683983.png?compress=1&resize=800x600"
+                            alt="">
+                        <div class="profile">
+                            <figure>
+                                <img src="https://cdn.dribbble.com/users/32512/avatars/normal/b394be60a32a4c82f89c73b0349af025.png?1556087466"
+                                    alt="" srcset="">
+                            </figure>
+                            <div class="name-profile">
+                                <h6>
+                                    Gleb Kuznetsov✈ 
+                                    <i class="fas fa-comment"></i>
+                                    <i class="fas fa-heart"></i>
+                                </h6>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.dribbble.com/users/411475/screenshots/15153711/media/9ed793e2814314d53f673a631d6d561b.jpg?compress=1&resize=800x600"
+                            alt="">
+                        <div class="profile">
+                            <figure>
+                                <img src="https://cdn.dribbble.com/users/411475/avatars/small/1083c2cd0e90af1c2a49c13e9453e215.jpg?1578477126"
+                                    alt="" srcset="">
+                            </figure>
+                            <div class="name-profile">
+                                <h6>
+                                    Alexander Shatov 
+                                    <i class="fas fa-comment"></i>
+                                    <i class="fas fa-heart"></i>
+                                </h6>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br>
+    </main>
+    <hr style="border: 1px solid darkgray; width: 80%;">
+    <footer>
+        <div class="list">
+            <div class="row-footer">
+                <div class="column-footer">
+                    <h1 class="dribble">dribbble</h1>
+                    <p class="font">Dribbble is the world’s leading community for creatives to share, grow, and get
+                        hired</p>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-dribbble"></i>
+                    <i class="fab fa-pinterest-square"></i>
+                </div>
+                <div class="column-footer">
+                    <ul class="footer-list">
+                        <li><b>For designers</b></li><br>
+                        <li>Go Pro!</li><br>
+                        <li>Explore design Work</li><br>
+                        <li>Design blog</li><br>
+                        <li>Overtime podcast</li><br>
+                        <li>Dribbble meetups</li><br>
+                        <li>Playsoffs</li><br>
+                        <li>Code of conduct</li><br>
+                    </ul>
+                </div>
+                <div class="column-footer">
+                    <ul class="footer-list">
+                        <li><b>Her designers</b></li><br>
+                        <li>Post a job opening</li><br>
+                        <li>Post a freelance project</li><br>
+                        <li>Search for designers</li><br>
+                        <li><b>Brands</b></li><br>
+                        <li>Advertise with us</li><br>
+                    </ul>
+                </div>
+                <div class="column-footer">
+                    <ul class="footer-list">
+                        <li><b>Company</b></li><br>
+                        <li>About</li><br>
+                        <li>Careers</li><br>
+                        <li>Support</li><br>
+                        <li>Media kit</li><br>
+                        <li>Dribbble shop</li><br>
+                        <li>Testimonials</li><br>
+                        <li>API</li><br>
+                        <li>Terms of servie</li><br>
+                        <li>Privacy policy</li><br>
+                    </ul>
+                </div>
+                <div class="column-footer">
+                    <ul class="footer-list">
+                        <li><b>Directories</b></li><br>
+                        <li>Design jobs</li><br>
+                        <li>Designers for hire</li><br>
+                        <li>Tags</li><br>
+                        <li>Places</li><br>
+                        <li><b>Design assets</b></li><br>
+                        <li>Shop Creative Marketss</li><br>
+                    </ul>
+                </div>
+                <div class="column-footer">
+                    <ul class="footer-list">
+                        <li><img style="width: 150px; heigt: 150px;"
+                                src="https://cdn4.buysellads.net/uu/1/65221/1591052149-260x200-Shot_Footer-Dribbble-CreativeMarket_copy_2_2x.png"
+                                alt="" srcset=""></li><br>
+                        <li>
+                            <p class="flawles">Flawless design is easy with millions of ready-made assets to choose from
+                            </p><br>
+                        </li>
+                        <li class="adver">ADVERTISE ON DRIBBBLE</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="footer-end">
+                <hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>© 2021 Dribbble. All rights reserved</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Made with ♥ remotely from
+                    TorontoOttawa</span>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>15,157,554 shots dribbbled
+                    Dribbble ball <i class="fab fa-dribbble"></i>
+                </span>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- //footer -->
+
+
+
+
+</body>
+
+</html>
