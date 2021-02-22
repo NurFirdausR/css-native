@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
@@ -231,7 +230,7 @@
             top: 20px;
             right: 10px;
             list-style: none;
-            display:    ;
+            display:    none;
             position: absolute;
             background-color: #f9f9f9;
             min-width: 140px;
@@ -315,7 +314,6 @@
         }
 
 
-        /* Float four columns side by side */
         .column {
             float: left;
             width: 30%;
@@ -324,12 +322,10 @@
             margin-top: 12px;
         }
 
-        /* Remove extra left and right margins, due to padding */
         .row {
             margin: 10px;
         }
 
-        /* Clear floats after the columns */
         .row:after {
             content: "";
             display:grid;
@@ -341,14 +337,8 @@
 membebaskan kita untuk menyeting tampilan dengan CSS di 
 berbagai resolusi dan lebar, tinggi daripada browser yang sedang 
 kita gunakan secara spesifik. */
-        @media screen and (max-width: 600px) {
-            .column {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
+     
 
-        /* Style the counter cards */
         .card {
             padding: 16px;
             height: 260px;
@@ -358,7 +348,7 @@ kita gunakan secara spesifik. */
 
         .card:hover {
             border-radius: 20px;
-            transition: box-shadow 0.3s ease-in-out;
+            transition: box-shadow 0.4s ease-in-out;
             box-shadow: 0px 2px 20px 2px rgb(138, 138, 138);
             padding: 16px;
             height: 260px;
@@ -436,12 +426,7 @@ kita gunakan secara spesifik. */
             clear: both;
         }
 
-        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-        @media screen and (max-width:600px) {
-            .column-footer {
-                width: 100%;
-            }
-        }
+     
 
         .font {
             font-family: sans-serif;
